@@ -1,0 +1,307 @@
+/* Core CSS design system for Eduarch - Advanced 3D, Animated, Playful and Modern */
+
+:root {
+  --font-fun: 'Fredoka', 'Quicksand', system-ui, -apple-system, sans-serif;
+  --font-text: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  /* Vibrant & Friendly HSL Color Palette */
+  --color-primary: #6c5ce7;
+  --color-primary-light: #a55eea;
+  --color-secondary: #00cec9;
+  --color-accent: #fdcb6e;
+  --color-danger: #ff7675;
+  --color-success: #2ecc71;
+  --color-background-grad: linear-gradient(135deg, #f5f6fa 0%, #dfe4ea 100%);
+  --color-sky-grad: linear-gradient(180deg, #74b9ff 0%, #a29bfe 100%);
+  --color-panel-bg: rgba(255, 255, 255, 0.9);
+  --color-card-shadow: 0px 8px 0px rgba(0, 0, 0, 0.08);
+  --color-card-shadow-active: 0px 2px 0px rgba(0, 0, 0, 0.08);
+  --color-text-dark: #2d3436;
+  --color-text-light: #ffffff;
+  --color-text-muted: #636e72;
+
+  --border-radius-sm: 12px;
+  --border-radius-md: 20px;
+  --border-radius-lg: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-text);
+  color: var(--color-text-dark);
+  background: var(--color-background-grad);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, button, .bubble-text {
+  font-family: var(--font-fun);
+  font-weight: 700;
+}
+
+/* Base Playful Elements */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Glassmorphism panel helper */
+.glass-panel {
+  background: var(--color-panel-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 4px solid #ffffff;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.06), var(--color-card-shadow);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Interactive Card 3D pop up hover effects */
+.glass-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 12px 0px rgba(0,0,0,0.03);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseStar {
+  0% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(253, 203, 110, 0.6)); }
+  50% { transform: scale(1.15); filter: drop-shadow(0 0 10px rgba(253, 203, 110, 0.9)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(253, 203, 110, 0.6)); }
+}
+
+@keyframes skeletonDance {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg) translateY(-8px); }
+  75% { transform: rotate(8deg) translateY(8px); }
+}
+
+@keyframes beamPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.95; }
+}
+
+@keyframes soundwave {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes mouthTalk {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.2); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Class utilities */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 3s ease-in-out infinite;
+}
+
+.animate-star {
+  animation: pulseStar 2s infinite;
+}
+
+.animate-skeleton {
+  animation: skeletonDance 1.2s ease-in-out infinite;
+}
+
+/* Audio wave bar pulsing animations */
+.sound-bar {
+  width: 4px;
+  height: 18px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  animation: soundwave 1s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+/* Cute Playful Button: Duolingo style */
+.btn-playful {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-sm);
+  border-bottom: 5px solid rgba(0,0,0,0.2);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.btn-playful:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+.btn-playful:active {
+  transform: translateY(2px);
+  border-bottom-width: 1px;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+}
+
+.btn-success {
+  background-color: var(--color-success);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-text-dark);
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+}
+
+/* Layout Container */
+.edu-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--color-sky-grad);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Clouds in Background */
+.cloud-bg {
+  position: absolute;
+  background: rgba(255,255,255,0.4);
+  border-radius: 100px;
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Drag and Drop style utilities */
+.drop-zone {
+  border: 4px dashed rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.1);
+  transition: all 0.25s ease;
+}
+.drop-zone.active {
+  border-color: var(--color-secondary);
+  background: rgba(0, 206, 201, 0.15);
+}
+
+/* Grid drawing styles for symmetry game */
+.grid-pixel {
+  aspect-ratio: 1;
+  border: 1px solid rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.grid-pixel:hover {
+  background-color: rgba(108, 92, 231, 0.2);
+}
+
+/* CRT Video Screen Visualizer */
+.crt-screen {
+  background: #111;
+  border: 5px solid #2f3640;
+  border-radius: 12px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 4px 10px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.crt-screen::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none;
+}
+.crt-screen::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: beamPulse 0.15s infinite;
+}
+.crt-scanline {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 255, 201, 0.1) 50%,
+    rgba(0, 255, 201, 0.1)
+  );
+  background-size: 100% 20px;
+  animation: scanline 6s linear infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+  .glass-panel {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+  button, .cloud-bg {
+    display: none !important;
+  }
+}
