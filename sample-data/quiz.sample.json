@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "notice": "Illustrative sample only. Adapt to the application's actual schema and assessment rules.",
+  "quizzes": [
+    {
+      "quiz_id": "sample-water-cycle-quiz",
+      "lesson_id": "sample-science-001",
+      "language": "en",
+      "questions": [
+        {
+          "question_id": "q1",
+          "question": "What provides much of the energy that drives evaporation?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The Sun"
+            },
+            {
+              "id": "b",
+              "text": "The Moon"
+            },
+            {
+              "id": "c",
+              "text": "The soil alone"
+            }
+          ],
+          "correct_option_id": "a",
+          "explanation": "Heat from the Sun helps liquid water evaporate."
+        }
+      ]
+    },
+    {
+      "quiz_id": "sample-water-cycle-quiz-ta",
+      "lesson_id": "sample-science-001-ta",
+      "language": "ta",
+      "questions": [
+        {
+          "question_id": "q1",
+          "question": "ஆவியாதலுக்கு முக்கியமாக எது ஆற்றலை வழங்குகிறது?",
+          "options": [
+            {
+              "id": "a",
+              "text": "சூரியன்"
+            },
+            {
+              "id": "b",
+              "text": "சந்திரன்"
+            },
+            {
+              "id": "c",
+              "text": "மண் மட்டும்"
+            }
+          ],
+          "correct_option_id": "a",
+          "explanation": "சூரிய வெப்பம் திரவ நீர் ஆவியாக உதவுகிறது."
+        }
+      ]
+    }
+  ]
+}

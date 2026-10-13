@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "notice": "Illustrative sample only. Adapt to the application's actual schema and curriculum.",
+  "lessons": [
+    {
+      "lesson_id": "sample-science-001",
+      "subject": "Science",
+      "topic": "The Water Cycle",
+      "language": "en",
+      "title": "Understanding the Water Cycle",
+      "introduction": "Water moves continuously between Earth's surface and the atmosphere.",
+      "content_sections": [
+        {
+          "heading": "Evaporation",
+          "body": "Heat from the Sun changes liquid water into water vapour."
+        },
+        {
+          "heading": "Condensation",
+          "body": "Water vapour cools and forms tiny droplets in clouds."
+        },
+        {
+          "heading": "Precipitation",
+          "body": "Water falls from clouds as rain or other forms of precipitation."
+        }
+      ],
+      "conclusion": "The water cycle continuously moves water through the environment.",
+      "video": {
+        "status": "placeholder",
+        "url": ""
+      },
+      "quiz_id": "sample-water-cycle-quiz"
+    },
+    {
+      "lesson_id": "sample-science-001-ta",
+      "subject": "அறிவியல்",
+      "topic": "நீர்ச் சுழற்சி",
+      "language": "ta",
+      "title": "நீர்ச் சுழற்சியைப் புரிந்துகொள்வோம்",
+      "introduction": "நீர் பூமியின் மேற்பரப்புக்கும் வளிமண்டலத்துக்கும் இடையில் தொடர்ந்து சுழல்கிறது.",
+      "content_sections": [
+        {
+          "heading": "ஆவியாதல்",
+          "body": "சூரிய வெப்பத்தால் திரவ நீர் நீராவியாக மாறுகிறது."
+        },
+        {
+          "heading": "ஒடுக்கம்",
+          "body": "நீராவி குளிர்ந்து சிறிய நீர்த்துளிகளாக மேகங்களை உருவாக்குகிறது."
+        },
+        {
+          "heading": "மழைப்பொழிவு",
+          "body": "மேகங்களிலிருந்து நீர் மழையாகப் பூமிக்கு வருகிறது."
+        }
+      ],
+      "conclusion": "நீர்ச் சுழற்சி இயற்கையில் நீரைத் தொடர்ந்து நகர்த்துகிறது.",
+      "video": {
+        "status": "placeholder",
+        "url": ""
+      },
+      "quiz_id": "sample-water-cycle-quiz-ta"
+    }
+  ]
+}
